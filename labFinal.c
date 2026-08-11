@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h> 
 
-// structure for donor (Linked List Node)
 struct Donor {
     int id;
     char name[50];
