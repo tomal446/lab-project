@@ -1,3 +1,4 @@
+//                              ID: 253-35-446
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h> 
@@ -19,11 +20,9 @@ char queue[50][5];
 int front = 0;
 int back = 0;
 
-// current date fixed for now
 int curr_month = 8;
 int curr_year = 2026;
 
-// check if 4 months passed
 int check_can_donate(int m, int y) {
     if (m == 0 && y == 0) {
         return 1; 
@@ -38,7 +37,6 @@ int check_can_donate(int m, int y) {
     }
 }
 
-// add a new donor to the linked list
 void add_donor() {
     printf("\n---------- ADD NEW DONOR ----------\n");
     struct Donor *new_donor = (struct Donor *)malloc(sizeof(struct Donor));
@@ -80,7 +78,6 @@ void add_donor() {
     
     printf("\n -> SUCCESS: Donor added! ID is %d\n", new_donor->id);
     
-    // check queue
     int q_size = back - front;
     int used = 0; 
     
@@ -102,7 +99,6 @@ void add_donor() {
     printf("-----------------------------------\n");
 }
 
-// customer asks for blood
 void get_blood() {
     printf("\n---------- REQUEST BLOOD ----------\n");
     char need_bg[5];
